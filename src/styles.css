@@ -1,22 +1,22 @@
 :root {
-  /* Color Palette - Quartz & Gold */
-  --bg-app: #1c1e21; /* Slightly darker than 353839 for depth */
-  --bg-sidebar: #26292b; 
-  --bg-card: #353839; /* Quartz */
-  --bg-card-hover: #3e4244;
-  --bg-input: #464b4d;
+  /* Color Palette - Quartz Background & Gold Accent */
+  --bg-app: #353839; /* Quartz Background */
+  --bg-sidebar: #2c2f30; /* Darker Quartz for Sidebar */
+  --bg-card: #3e4143; /* Lighter Quartz for Cards */
+  --bg-card-hover: #484c4e;
+  --bg-input: #2c2f30;
   
   --text-primary: #ffffff;
-  --text-secondary: #d1d5db;
-  --text-muted: #9ca3af;
+  --text-secondary: #c9cbcc;
+  --text-muted: #949799;
   
   --accent: #FFD700; /* Gold */
   --accent-glow: rgba(255, 215, 0, 0.2);
   --accent-soft: rgba(255, 215, 0, 0.1);
-  --danger: #ff4d4d;
+  --danger: #ff5c5c;
   
-  --border-light: rgba(255, 255, 255, 0.05);
-  --border-medium: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.04);
+  --border-medium: rgba(255, 255, 255, 0.06);
   
   /* Typography */
   --font-header: 'Outfit', sans-serif;
@@ -80,7 +80,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #171923; /* Dark icon on gold */
+  color: #353839; /* Quartz icon on gold */
 }
 
 .brand-name {
@@ -196,7 +196,7 @@ input:checked + .ios-slider:before { transform: translateX(18px); }
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.04), transparent 70%);
+  background: radial-gradient(circle at 50% 0%, var(--accent-soft), transparent 70%);
   overflow-y: auto;
 }
 
