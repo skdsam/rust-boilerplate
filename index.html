@@ -1,37 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tauri Boilerplate</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-    <script type="module" src="/src/main.js" defer></script>
-  </head>
 
-  <body>
-    <div id="app">
-      <div class="container">
-        <div class="logo-container">
-          <a href="https://tauri.app" target="_blank">
-            <img src="/src/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
-          </a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-            <img src="/src/assets/javascript.svg" class="logo" alt="JavaScript logo" />
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IconManager Pro</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+  <script type="module" src="/src/main.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="sidebar">
+      <div class="logo-area">
+        <img src="/src/assets/tauri.svg" alt="Logo" class="mini-logo" />
+        <span>IconManager</span>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>GENERAL</h3>
+        <div class="sidebar-item">
+          <span>Dark Mode</span>
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="sidebar-item">
+          <span>Auto Updates</span>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="sidebar-item">
+          <span>Notifications</span>
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>ADVANCED</h3>
+        <div class="sidebar-item"><span>Export Settings</span></div>
+        <div class="sidebar-item"><span>Cloud Sync</span></div>
+        <div class="sidebar-item"><span>Integrations</span></div>
+      </div>
+
+      <div class="trial-card">
+        <div class="trial-info">
+          <span>12 Trial Days Left</span>
+          <div class="progress-bg">
+            <div class="progress-bar" style="width: 40%"></div>
+          </div>
+        </div>
+        <button class="btn-activate">Activate Pro</button>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <div class="search-bar">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" placeholder="Search icon sets..." />
+        </div>
+        <div class="user-profile">
+          <div class="avatar">S</div>
+        </div>
+      </header>
+
+      <div class="dashboard-grid">
+        <div class="card import-card">
+          <div class="card-header">
+            <h2>Import Icons</h2>
+            <button class="btn-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="form-group">
+            <label>Set Name</label>
+            <input type="text" placeholder="e.g. Navigation Icons" />
+          </div>
+          <div class="upload-area">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <p>Drag icons here or <span>Browse files</span></p>
+          </div>
+          <div class="card-footer">
+            <button class="btn-secondary">Cancel</button>
+            <button class="btn-primary">Create Set</button>
+          </div>
         </div>
 
-        <h1>Rust & Bun</h1>
-
-        <div class="card">
-          <p>Ready to build something amazing?</p>
-          <div class="input-group">
-            <input id="greet-input" placeholder="Enter a name..." />
-            <button id="greet-button" type="button">Greet</button>
+        <div class="card menu-card">
+          <div class="menu-item">
+            <span class="label">Copy SVG Code</span>
+            <span class="shortcut">⌘ C</span>
           </div>
-          <p id="greet-msg"></p>
+          <div class="menu-item">
+            <span class="label">Export as PNG</span>
+            <span class="shortcut">⌘ E</span>
+          </div>
+          <div class="menu-item">
+            <span class="label">Add to Favorites</span>
+            <span class="shortcut">⌘ D</span>
+          </div>
+          <hr />
+          <div class="menu-item delete">
+            <span class="label">Delete Set</span>
+            <span class="shortcut">⌫</span>
+          </div>
+        </div>
+
+        <div class="card empty-state">
+          <div class="empty-graphic">
+            <div class="dashed-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+          </div>
+          <h3>Your Icon Set is Empty</h3>
+          <p>Start by adding some icons to this collection</p>
+          <button class="btn-primary">Add Icons</button>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
