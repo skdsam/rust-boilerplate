@@ -1,22 +1,22 @@
 :root {
-  /* Color Palette - Muted Teal & Periwinkle Accent */
-  --bg-app: #77A8A8; /* Muted Teal Background */
-  --bg-sidebar: #659292; /* Slightly Darker Teal for Sidebar */
-  --bg-card: #ffffff; /* Solid White Cards for Professional Contrast */
-  --bg-card-hover: #f8fafc;
-  --bg-input: #f1f5f9;
+  /* Color Palette - Muted Teal & Pale White */
+  --bg-app: #77A8A8; /* Muted Teal */
+  --bg-sidebar: #6b9999; 
+  --bg-card: #F5F5F7; /* Pale White */
+  --bg-card-hover: #ffffff;
+  --bg-input: #eef2f2;
   
-  --text-primary: #1e293b; /* Dark text for light background */
-  --text-secondary: #475569;
-  --text-muted: #64748b;
+  --text-primary: #1a2e2e; /* Deep Teal-Grey for contrast */
+  --text-secondary: #455a5a;
+  --text-muted: #708a8a;
   
-  --accent: #7E7CEB; /* Periwinkle Accent */
-  --accent-glow: rgba(126, 124, 235, 0.2);
-  --accent-soft: rgba(126, 124, 235, 0.1);
-  --danger: #ef4444;
+  --accent: #ffffff; /* Pure White as Accent */
+  --accent-glow: rgba(255, 255, 255, 0.3);
+  --accent-soft: rgba(255, 255, 255, 0.15);
+  --danger: #d9534f;
   
-  --border-light: rgba(0, 0, 0, 0.05);
-  --border-medium: rgba(0, 0, 0, 0.08);
+  --border-light: rgba(0, 0, 0, 0.04);
+  --border-medium: rgba(0, 0, 0, 0.06);
   
   /* Typography */
   --font-header: 'Outfit', sans-serif;
@@ -299,11 +299,13 @@ input:checked + .ios-slider:before { transform: translateX(18px); }
   font-weight: 700;
   font-size: 13px;
   cursor: pointer;
+  background: var(--text-primary); /* Dark button on pale white card */
+  color: white;
   transition: var(--transition);
 }
 
 .btn-primary-solid:hover {
-  background: #e6c200; /* Darker Gold */
+  background: var(--bg-app); /* Teal on hover */
   transform: translateY(-2px);
 }
 
