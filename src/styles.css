@@ -81,7 +81,6 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  box-shadow: 0 8px 16px -4px var(--accent-glow);
 }
 
 .brand-name {
@@ -91,6 +90,7 @@ body {
   letter-spacing: -0.01em;
   background: linear-gradient(to right, #fff, #cbd5e1);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -182,7 +182,6 @@ input:checked + .ios-slider:before { transform: translateX(18px); }
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
   padding: 24px;
-  box-shadow: var(--shadow-ui);
 }
 
 .pro-header { display: flex; justify-content: space-between; margin-bottom: 12px; }
@@ -227,7 +226,6 @@ input:checked + .ios-slider:before { transform: translateX(18px); }
 
 .search-box:focus-within {
   border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
 .search-icon { color: var(--text-muted); }
@@ -257,7 +255,6 @@ input:checked + .ios-slider:before { transform: translateX(18px); }
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
   padding: 36px;
-  box-shadow: var(--shadow-ui);
   transition: var(--transition);
 }
 
@@ -306,13 +303,11 @@ input:checked + .ios-slider:before { transform: translateX(18px); }
   font-size: 14px;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 12px -2px var(--accent-glow);
 }
 
 .btn-primary-solid:hover {
   background: #2563eb;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px -4px var(--accent-glow);
 }
 
 .u-btn-ghost { background: none; border: none; color: var(--text-secondary); font-weight: 600; cursor: pointer; padding: 12px; font-size: 14px; }
