@@ -1,14 +1,17 @@
 :root {
   /* Color Palette - Muted Teal & Pale White */
-  --bg-app: #77A8A8; /* Muted Teal */
+  --bg-app: #77A8A8; /* Mystic Jade */
   --bg-sidebar: #6b9999; 
   --bg-card: #F5F5F7; /* Pale White */
   --bg-card-hover: #ffffff;
-  --bg-input: #eef2f2;
+  --bg-input: #e2e8e8;
   
-  --text-primary: #1a2e2e; /* Deep Teal-Grey for contrast */
-  --text-secondary: #455a5a;
-  --text-muted: #708a8a;
+  --text-primary: #F5F5F7; /* Pale White on Jade */
+  --text-secondary: #d1dfdf;
+  --text-muted: #b0c9c9;
+  
+  --card-text: #456d6d; /* Darkened Jade for readability on White */
+  --card-text-muted: #708a8a;
   
   --accent: #ffffff; /* Pure White as Accent */
   --accent-glow: rgba(255, 255, 255, 0.3);
@@ -202,8 +205,8 @@ input:checked + .ios-slider:before { transform: translateX(18px); }
   justify-content: space-between;
   align-items: center;
   padding: 32px 48px;
-  background: rgba(119, 168, 168, 0.9); /* Translucent Teal */
-  backdrop-filter: blur(8px);
+  background: rgba(119, 168, 168, 0.4); /* Subtle Translucent Jade */
+  backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 5;
@@ -249,18 +252,27 @@ input:checked + .ios-slider:before { transform: translateX(18px); }
 
 .u-card {
   background-color: var(--bg-card);
-  border: 1px solid var(--border-medium);
+  border: 1px solid rgba(0,0,0,0.04);
   border-radius: var(--radius-lg);
   padding: 36px;
   transition: var(--transition);
+  color: var(--card-text); /* Mystic Jade text on Pale White Card */
 }
 
-.u-card:hover { transform: translateY(-6px); border-color: var(--border-medium); }
+.u-card-title { 
+  font-family: var(--font-header); 
+  font-size: 18px; 
+  font-weight: 700; 
+  margin: 0;
+  color: var(--card-text);
+}
 
-.u-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
-.u-card-title { font-family: var(--font-header); font-size: 18px; font-weight: 700; margin: 0; }
-
-.u-card-description { font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin: -14px 0 24px 0; }
+.u-card-description { 
+  font-size: 13px; 
+  color: var(--card-text-muted); 
+  line-height: 1.6; 
+  margin: -14px 0 24px 0; 
+}
 
 .u-form-field { margin-bottom: 24px; }
 .u-label { display: block; font-size: 10px; font-weight: 800; color: var(--text-muted); margin-bottom: 10px; letter-spacing: 0.1em; }
@@ -283,9 +295,9 @@ input:checked + .ios-slider:before { transform: translateX(18px); }
 
 .u-dropzone:hover { border-color: var(--accent); background: var(--accent-soft); }
 .u-dropzone-icon { color: var(--accent); margin-bottom: 20px; }
-.u-dropzone-text { font-size: 14px; font-weight: 500; color: var(--text-secondary); }
-.u-highlight { color: var(--accent); font-weight: 700; }
-.u-dropzone-sub { display: block; margin-top: 10px; font-size: 11px; color: var(--text-muted); font-weight: 500; }
+.u-dropzone-text { font-size: 14px; font-weight: 500; color: var(--card-text); }
+.u-highlight { color: var(--card-text); font-weight: 700; text-decoration: underline; }
+.u-dropzone-sub { display: block; margin-top: 10px; font-size: 11px; color: var(--card-text-muted); font-weight: 500; }
 
 .u-card-footer { display: flex; justify-content: flex-end; gap: 20px; margin-top: 36px; }
 
@@ -299,13 +311,13 @@ input:checked + .ios-slider:before { transform: translateX(18px); }
   font-weight: 700;
   font-size: 13px;
   cursor: pointer;
-  background: var(--text-primary); /* Dark button on pale white card */
+  background: var(--bg-app); /* Jade button on white card */
   color: white;
   transition: var(--transition);
 }
 
 .btn-primary-solid:hover {
-  background: var(--bg-app); /* Teal on hover */
+  background: var(--card-text);
   transform: translateY(-2px);
 }
 
